@@ -1,1 +1,1 @@
-# create-minimal-app
+# lershi-minimal-app

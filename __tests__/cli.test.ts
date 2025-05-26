@@ -27,7 +27,7 @@ describe('CLI', () => {
     const options = { template: 'default' };
 
     program
-      .name('create-minimal-app')
+      .name('lershi-minimal-app')
       .argument('<project-name>')
       .option('-t, --template <template>')
       .action(async (name, opts) => {
@@ -48,7 +48,7 @@ describe('CLI', () => {
     (utils.validateProjectName as any).mockRejectedValueOnce(error);
 
     program
-      .name('create-minimal-app')
+      .name('lershi-minimal-app')
       .argument('<project-name>')
       .action(async (name) => {
         const { scaffoldProject } = await import('../src/scaffold');

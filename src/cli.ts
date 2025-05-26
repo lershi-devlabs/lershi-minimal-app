@@ -23,7 +23,7 @@ const program = new Command();
 const promptTemplates = ['default']; // Add more template names as needed
 
 program
-  .name('create-minimal-app')
+  .name('lershi-minimal-app')
   .description('A CLI tool to scaffold minimal project structures')
   .usage('<project-name> [options]')
   .version(pkg.version, '-v, --version', 'output the current version')
@@ -31,12 +31,12 @@ program
 Minimal App Scaffolder
 
 Usage Examples:
-  $ create-minimal-app my-app
-  $ create-minimal-app my-app -t html
-  $ create-minimal-app my-app -y
+  $ lershi-minimal-app my-app
+  $ lershi-minimal-app my-app -t html
+  $ lershi-minimal-app my-app -y
 `)
   .addHelpText('after', `
-For more info, visit: https://github.com/lershi-devlabs/create-minimal-app
+For more info, visit: https://github.com/lershi-devlabs/lershi-minimal-app
 `)
   .argument('<project-name>', 'Name of the project')
   .option('-t, --template <template>', 'Project template to use', 'default')
@@ -118,7 +118,7 @@ For more info, visit: https://github.com/lershi-devlabs/create-minimal-app
 program.exitOverride((err) => {
   if (err.code === 'commander.missingArgument') {
     console.error("error: missing required argument 'project-name'");
-    console.error('Usage: create-minimal-app <project-name> [options]');
+    console.error('Usage: lershi-minimal-app <project-name> [options]');
     process.exit(1);
   }
   // Exit cleanly for help/version
