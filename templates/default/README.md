@@ -1,3 +1,3 @@
 # ${name}
 
-A minimal project created with create-minimal-app.
+A minimal project created with lershi-minimal-app.
