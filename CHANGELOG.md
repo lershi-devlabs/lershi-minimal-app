@@ -1,5 +1,11 @@
 # lershi-minimal-app
 
+## 0.4.1
+
+### Patch Changes
+
+- updated bin to src/
+
 ## 0.4.0
 
 ### Minor Changes
