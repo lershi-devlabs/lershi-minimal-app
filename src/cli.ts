@@ -102,4 +102,17 @@ program
     }
   });
 
+program.exitOverride((err) => {
+  if (err.code === 'commander.missingArgument') {
+    console.error("error: missing required argument 'project-name'");
+    console.error('Usage: create-minimal-app <project-name> [options]');
+    process.exit(1);
+  }
+  throw err;
+});
+
+program.configureOutput({
+  writeErr: () => {} // Suppress default error output from Commander
+});
+
 program.parse(process.argv); 
