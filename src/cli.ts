@@ -25,6 +25,19 @@ const promptTemplates = ['default']; // Add more template names as needed
 program
   .name('create-minimal-app')
   .description('A CLI tool to scaffold minimal project structures')
+  .usage('<project-name> [options]')
+  .version(pkg.version, '-v, --version', 'output the current version')
+  .addHelpText('before', `
+Minimal App Scaffolder
+
+Usage Examples:
+  $ create-minimal-app my-app
+  $ create-minimal-app my-app -t html
+  $ create-minimal-app my-app -y
+`)
+  .addHelpText('after', `
+For more info, visit: https://github.com/lershi-devlabs/create-minimal-app
+`)
   .argument('<project-name>', 'Name of the project')
   .option('-t, --template <template>', 'Project template to use', 'default')
   .option('-y, --yes', 'Skip prompts and use default values')
@@ -107,6 +120,10 @@ program.exitOverride((err) => {
     console.error("error: missing required argument 'project-name'");
     console.error('Usage: create-minimal-app <project-name> [options]');
     process.exit(1);
+  }
+  // Exit cleanly for help/version
+  if (err.code === 'commander.helpDisplayed' || err.code === 'commander.version') {
+    process.exit(0);
   }
   throw err;
 });
