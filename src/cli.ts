@@ -58,8 +58,7 @@ For more info, visit: https://github.com/lershi-devlabs/lershi-minimal-app
           type: 'select',
           name: 'pm',
           message: 'Which package manager?',
-          choices: ['npm', 'yarn', 'pnpm', 'bun'],
-          skip: (prev: { install?: boolean }) => !prev.install
+          choices: ['npm', 'yarn', 'pnpm', 'bun']
         },
         {
           type: 'confirm',
