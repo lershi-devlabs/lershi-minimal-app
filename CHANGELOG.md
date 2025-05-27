@@ -1,5 +1,11 @@
 # lershi-minimal-app
 
+## 0.7.1
+
+### Patch Changes
+
+- version.js fix
+
 ## 0.7.0
 
 ### Minor Changes

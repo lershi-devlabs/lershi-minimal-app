@@ -4,7 +4,7 @@ import { Command } from 'commander';
 import updateNotifier from 'update-notifier';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import { version } from './version';
+import { version } from './version.js';
 import { scaffoldProject } from './scaffold.js';
 import enquirer from 'enquirer';
 import { logger } from './logger.js';

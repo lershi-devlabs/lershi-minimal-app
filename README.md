@@ -54,9 +54,11 @@ lershi-minimal-app/
 - **Publish to npm:**
 
 1. npm run changeset
-2. npm run version
-3. git stuff
-4. npm run publish:prod 
+2. npm run prebuild
+3. npm run version
+4. git add . && git commit -m "release: version bump and changelog"
+5. git push
+6. npm run publish:prod
 
 ## Next Steps
 - Add more templates to `templates/`
