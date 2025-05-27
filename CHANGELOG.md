@@ -1,5 +1,11 @@
 # lershi-minimal-app
 
+## 0.6.1
+
+### Patch Changes
+
+- updated dist
+
 ## 0.6.0
 
 ### Minor Changes

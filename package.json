@@ -1,6 +1,6 @@
 {
   "name": "lershi-minimal-app",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "A CLI tool to scaffold minimal project structures",
   "main": "dist/cli.js",
   "types": "dist/cli.d.ts",
