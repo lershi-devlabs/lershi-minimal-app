@@ -1,6 +1,6 @@
 {
   "name": "lershi-minimal-app",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "A CLI tool to scaffold minimal project structures",
   "main": "dist/cli.js",
   "types": "dist/cli.d.ts",
@@ -16,13 +16,10 @@
   "scripts": {
     "prebuild": "node scripts/update-version.cjs",
     "build": "npm run prebuild && tsc",
-    "start": "node --loader ts-node/esm src/cli.ts",
-    "test": "vitest",
-    "test:watch": "vitest watch",
+    "prepublishOnly": "rm -rf dist && npm run build",
+    "publish:prod": "npm publish --access public",
     "changeset": "changeset",
-    "version": "changeset version",
-    "release": "changeset publish",
-    "publish:prod": "npm publish --access public"
+    "version": "changeset version"
   },
   "keywords": [
     "cli",

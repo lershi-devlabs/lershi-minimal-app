@@ -1,5 +1,11 @@
 # lershi-minimal-app
 
+## 0.7.0
+
+### Minor Changes
+
+- updated deploy logic so that versioning is correct
+
 ## 0.6.1
 
 ### Patch Changes

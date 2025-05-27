@@ -52,15 +52,11 @@ lershi-minimal-app/
   npm test
   ```
 - **Publish to npm:**
-  1. Bump the version in `package.json` (must be unique on npm)
-  2. Build the project:
-     ```sh
-     npm run build
-     ```
-  3. Publish:
-     ```sh
-     npm run publish:prod
-     ```
+
+1. npm run changeset
+2. npm run version
+3. git stuff
+4. npm run publish:prod 
 
 ## Next Steps
 - Add more templates to `templates/`
