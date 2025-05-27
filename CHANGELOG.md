@@ -1,5 +1,11 @@
 # lershi-minimal-app
 
+## 0.8.0
+
+### Minor Changes
+
+- updated readme, and html template
+
 ## 0.7.1
 
 ### Patch Changes
