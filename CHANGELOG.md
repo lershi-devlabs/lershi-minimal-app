@@ -1,5 +1,11 @@
 # lershi-minimal-app
 
+## 0.5.0
+
+### Minor Changes
+
+- Generate a Version File at Build Time
+
 ## 0.4.1
 
 ### Patch Changes

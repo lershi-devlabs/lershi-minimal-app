@@ -3,8 +3,8 @@
 import { Command } from 'commander';
 import updateNotifier from 'update-notifier';
 import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
-import { readFileSync } from 'fs';
+import { dirname } from 'path';
+import { version } from './version';
 import { scaffoldProject } from './scaffold.js';
 import enquirer from 'enquirer';
 import { logger } from './logger.js';
@@ -12,10 +12,9 @@ const { prompt } = enquirer;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const pkg = JSON.parse(readFileSync(join(__dirname, '..', 'package.json'), 'utf8'));
 
 // Check for updates
-const notifier = updateNotifier({ pkg });
+const notifier = updateNotifier({ pkg: { name: "lershi-minimal-app", version } });
 notifier.notify();
 
 const program = new Command();
@@ -26,7 +25,7 @@ program
   .name('lershi-minimal-app')
   .description('A CLI tool to scaffold minimal project structures')
   .usage('<project-name> [options]')
-  .version(pkg.version, '-v, --version', 'output the current version')
+  .version(version, '-v, --version', 'output the current version')
   .addHelpText('before', `
 Minimal App Scaffolder
 
