@@ -1,5 +1,11 @@
 # lershi-minimal-app
 
+## 0.6.0
+
+### Minor Changes
+
+- fixed build to not have src/
+
 ## 0.5.0
 
 ### Minor Changes
